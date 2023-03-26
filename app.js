@@ -1,10 +1,11 @@
-let orange = 150;
-let apple = 100;
+let max = 550;
+let num = 1;
+let count = 0;
 
-if(orange < apple){
-  alert('みかんの値段がりんごより安い');
-} else if(orange == apple){
-  alert('みかんとりんごの値段が同じ');
-} else{
-  alert('みかんの値段がりんごより高い');
-} 
+while(num < max){
+  num = num * 2;
+  count = count + 1;
+}
+
+alert('2を掛け続けて' + max + 'を越えるのに必要だった回数は' + count + '回です');
+
