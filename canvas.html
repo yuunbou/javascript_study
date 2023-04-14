@@ -49,9 +49,9 @@
       vertical-align: middle;
       margin-left: 10px;
     }
-/* ペンのカラーの枠 */
+/* ペンのカラー選択時の枠の色 */
     .selected {
-      border: 5px solid black;
+      border: 5px solid red;
     }
 
     button.active {
@@ -65,9 +65,9 @@
     .color1 {
       background-color: red;
     }
-
+/* ペンの色の設定 */
     #red {
-      background-color: red;
+      background-color: mediumvioletred;
     }
 
     #green {
@@ -97,7 +97,7 @@
     #lightgrey {
       background-color: rgb(167, 167, 167);
     }
-
+/* 消しゴムの役割 */
     #white {
       background-color: white;
       color: black;
@@ -123,7 +123,7 @@
     <button id="eraser" class="color">ERASER</button>
     <button id="clear">Clear</button>
     <button id="download">Download</button>
-
+<!-- ペンの太さ -->
     <div class="radio-wrapper">
       <label><input type="radio" id="5px" class="selectLineWidth" name="lineWidth" value="5" checked>5px</label>
       <label><input type="radio" id="10px" class="selectLineWidth" name="lineWidth" value="10">10px</label>
@@ -137,10 +137,10 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.2.0/fabric.min.js"></script>
   <script>
-
+// 定数を定義
     const CANVAS_WIDTH = 1000;
     const CANVAS_HEIGHT = 1000;
-
+// 変数を定義
     let LineWidthSave = 5;//消しゴムを使った後で元のペンサイズに戻すための記録用
 
     var canvas = new fabric.Canvas("canvas");
@@ -154,7 +154,7 @@
 
     //色選択ボタンの設定
     const selectColorBtn = document.getElementsByClassName('color');
-
+// 繰り返し処理
     for (i = 0; i < selectColorBtn.length; i++) {
       selectColorBtn[i].addEventListener('click', function (e) {
         //ボタンが自分の色を取得して描画色にする
