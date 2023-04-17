@@ -1,8 +1,7 @@
-let i;
-let num = 0;
-
-for(i = 1; i < 11; i++){
-  num = num + i;
+for(let number = 1; number <= 100; number ++){
+  if(number % 3 == 0){
+    console.log('3の倍数です');
+  } else {
+    console.log(number);
+  }
 }
-
-alert('1から10まで足し算した結果は' + num + 'です');
