@@ -1,5 +1,4 @@
-// varによる再宣言
-var nickname = "taro"
-console.log(nickname)
-var nickname = "ichiro"
-console.log(nickname)
+'use strict';
+
+// 確認ダイアログ
+console.log(window.confirm('ゲームスタート！準備はいい？'));
