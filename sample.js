@@ -1,8 +1,5 @@
 'use strict';
 
-// 確認ダイアログ
-if(window.confirm('ゲームスタート！準備はいい？')) {
-  console.log('ゲームを開始します。');
-} else {
-  console.log('ゲームを終了します。');
-}
+// 入力に応じて動作を変更する
+let answer = window.prompt('ヘルプを見ますか？');
+console.log(answer);
