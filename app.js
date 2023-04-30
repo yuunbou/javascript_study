@@ -1,5 +1,13 @@
 'use strict';
 
-// HTMLの書き換え
-// document.getElementById('id名').textContent = 書き換えたい文字列;
-document.getElementById('choice').textContent = '通知を受け取りますか？';
+// 時間で異なるメッセージの表示
+
+const hour = new Date().getHours();
+
+if(hour >= 19 && hour < 12) { 
+  window.alert('お弁当30%OFF!');
+} else if(hour === 9 || hour === 15) {
+  window.alert('お弁当１個買ったら１個おまけ');
+} else {
+  window.alert('お弁当はいかがですか？');
+}
