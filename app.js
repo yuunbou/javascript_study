@@ -1,13 +1,18 @@
 'use strict';
 
-// 時間で異なるメッセージの表示
+// 繰り返しを使ってモンスターの体力を削る
 
-const hour = new Date().getHours();
+// 敵の体力は１００
+let enemy = 100;
 
-if(hour >= 19 && hour < 12) { 
-  window.alert('お弁当30%OFF!');
-} else if(hour === 9 || hour === 15) {
-  window.alert('お弁当１個買ったら１個おまけ');
-} else {
-  window.alert('お弁当はいかがですか？');
+window.alert('戦闘スタート！');
+
+while(enemy > 0) {
+  // 定数attack
+  const attack = Math.floor(Math.random() * 30) + 1;
+  
+  console.log(`モンスターに${attack}のダメージ!`);
+  
+  enemy -= attack;
 }
+
