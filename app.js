@@ -1,20 +1,11 @@
 'use strict';
 
-// 繰り返しを使ってモンスターの体力を削る
+// 税込価格を計算する
 
-// 敵の体力は１００
-let enemy = 100;
-let count = 0;
 
-window.alert('戦闘スタート！');
-
-while(enemy > 0) {
-  // 定数attack
-  const attack = Math.floor(Math.random() * 30) + 1;
-  
-  console.log(`モンスターに${attack}のダメージ!`);
-  
-  enemy -= attack;
-  count += 1;
+function total(price) {
+  const tax = 0.1;
+  return price + price * tax;
 }
-console.log(`${count}回でモンスターを倒した！`);
+
+alert('コーヒーメーカーの値段は' + total(8000) + '円（税込)です。')
