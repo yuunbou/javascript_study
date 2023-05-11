@@ -1,13 +1,24 @@
 'use strict';
 
-// 税込価格を計算する
+// FizzBuzz
+let num = prompt('好きな数字を入れてください');
 
+let judge = fizzbuzz(num);
 
-function total(price) {
-  const tax = 0.1;
-  return price + price * tax;
-};
+// alert('結果は' + judge + 'です');
 
-console.log('コーヒーメーカーの値段は' + total(8000) + '円（税込)です。');
+function fizzbuzz(num) {
+  let answer;
+  if(num % 3 === 0 && num % 5 === 0) {
+    answer = 'fizzbuzz';
+  } else if(num % 3 === 0) {
+    answer = 'fizz';
+  } else if(num % 5 === 0) {
+    answer = 'buzz';
+  } else {
+    answer = num;
+  }
+  return answer;
+}
 
-document.getElementById('output').textContent = 'コーヒーメーカーの値段は' + total(8000) + '円（税込）です。';
+document.getElementById('output').textContent = 'FuzzBuzzの結果は' + judge + 'です'
