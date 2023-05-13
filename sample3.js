@@ -1,10 +1,9 @@
-// モンスターの体力を作成
-let monsterLife = 100;
+'use strict';
 
-while(monsterLife > 0) {
-    let attack = prompt('1〜100の数値を入力してください');
-    monsterLife -= attack
-    alert(`モンスターに攻撃！モンスターに${attack}のダメージ！モンスターの残り体力は${monsterLife}です`);
+// 配列を作成
+let todo = ['デザインカンプ作成', 'データ整理', '勉強会申込み', '牛乳を買う']
+
+//  配列の各項目全て読み取る
+for (let item of todo) {
+    console.log(item);
 }
-
-alert('モンスターを倒した！');
