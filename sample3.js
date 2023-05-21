@@ -1,11 +1,9 @@
 'use strict';
 
-// 配列を作成
-let todo = ['デザインカンプ作成', 'データ整理', '勉強会申込み', '牛乳を買う'];
-// 配列を追加
-todo.push('歯医者に行く');
-//  配列の各項目全て読み取る
-for (let item of todo) {
-    const li = `<li>${item}</li>`;
-    document.getElementById('list').insertAdjacentHTML('beforeend', li);
-}
+// アイテムの価格と在庫を表示する
+let jsbook = {title: 'JavaScript入門', price: 2500, stock: 3};
+console.log(jsbook);
+console.log(jsbook.title);
+console.log(jsbook['price']);
+jsbook.stock = 10;
+console.log(jsbook.stock);
