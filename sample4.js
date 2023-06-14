@@ -12,4 +12,3 @@ function point(num, digit) {
 
 document.getElementById('output').textContent = point(Math.PI, 2);
 
-
