@@ -19,8 +19,16 @@ goal.setHours(23);
 goal.setMinutes(59);
 goal.setSeconds(59);
 
-console.log(countdown(goal));
-const counter = countdown(goal);
-const time = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
-document.getElementById('timer').textContent = time;
+function recalc() {
+  console.log(countdown(goal));
+  const counter = countdown(goal);
+  const time = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
+  document.getElementById('timer').textContent = time;
+  refresh();
+}
 
+function refresh() {
+  setTimeout(recalc, 1000);
+}
+
+recalc();
